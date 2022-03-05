@@ -1,7 +1,0 @@
-<RCC>
-  <qresource prefix="CNS"/>
-  <qresource prefix="new">
-    <file>MapPicture.png</file>
-    <file>mapimage.png</file>
-  </qresource>
-</RCC>

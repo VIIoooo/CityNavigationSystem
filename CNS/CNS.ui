@@ -1,0 +1,996 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CNSClass</class>
+ <widget class="QMainWindow" name="CNSClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>CNS</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>40</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>仿宋</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>最短路径</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="SearchSpotInfo">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>160</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>查询</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>190</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>仿宋</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>景点：</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>220</y>
+      <width>81</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>仿宋</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>多景点路径规划</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="SearchShortestPath">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>40</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>查询</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="pathstart">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>70</y>
+      <width>111</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string/>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>大明宫国家遗址公园</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>西安钟鼓楼</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>西安城墙</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>大唐不夜城</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>大雁塔</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>大唐芙蓉园</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>永兴坊</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>回民街</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>洒金桥</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>小雁塔</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>大唐西市</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>阿房宫遗址</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>青龙寺</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>西安碑林博物馆</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>陕西历史博物馆</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>曲江海洋极地公园</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>白鹿原·白鹿仓</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>青曲社</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>西安半坡遗址</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>中国唐苑</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>西安世博园</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>秦始皇陵博物院</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>华清池景区</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>终南山·南五台景区</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>翠华山</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>乐华恒业欢乐世界</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>秦岭野生动物园</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>古观音禅寺</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>西北工业大学长安校区</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>西安电子科技大学南校区</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>诗经里</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>昆明池七夕公园</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>华夏文旅海洋公园</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>清凉山森林公园</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>西安植物园</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>曲江池遗址公园</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>城市运动公园</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>兴庆宫公园</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>浐灞桃花潭公园</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>西安建筑科技大学草堂校区</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>371</width>
+      <height>251</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="CNS.qrc">:/new/mapimage.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="exit">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>320</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>退出系统</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="Spotname">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>190</y>
+      <width>111</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string/>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>大明宫国家遗址公园</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>西安钟鼓楼</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>西安城墙</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>大唐不夜城</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>大雁塔</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>大唐芙蓉园</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>永兴坊</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>回民街</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>洒金桥</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>小雁塔</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>大唐西市</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>阿房宫遗址</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>青龙寺</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>西安碑林博物馆</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>陕西历史博物馆</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>曲江海洋极地公园</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>白鹿原·白鹿仓</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>青曲社</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>西安半坡遗址</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>中国唐苑</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>西安世博园</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>秦始皇陵博物院</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>华清池景区</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>终南山·南五台景区</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>翠华山</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>乐华恒业欢乐世界</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>秦岭野生动物园</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>古观音禅寺</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>西北工业大学长安校区</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>西安电子科技大学南校区</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>诗经里</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>昆明池七夕公园</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>华夏文旅海洋公园</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>清凉山森林公园</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>西安植物园</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>曲江池遗址公园</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>城市运动公园</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>兴庆宫公园</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>浐灞桃花潭公园</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>西安建筑科技大学草堂校区</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QPushButton" name="pathplanning">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>220</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>查询</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>100</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>仿宋</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>终点：</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="pathtype">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>130</y>
+      <width>111</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string/>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>最短路径</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>最短时间</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>最佳人行</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>最佳车行</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>最佳观景</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>经济实惠</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>130</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>仿宋</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>类型：</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>280</y>
+      <width>101</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>西安市景点地图导航</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>160</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>仿宋</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>景点信息</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>70</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>仿宋</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>起点：</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="Spotinput">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>250</y>
+      <width>161</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;请输入想要去的景点数目及其编号(空格隔开）&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="pathend">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>100</y>
+      <width>111</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string/>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>大明宫国家遗址公园</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>西安钟鼓楼</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>西安城墙</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>大唐不夜城</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>大雁塔</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>大唐芙蓉园</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>永兴坊</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>回民街</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>洒金桥</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>小雁塔</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>大唐西市</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>阿房宫遗址</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>青龙寺</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>西安碑林博物馆</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>陕西历史博物馆</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>曲江海洋极地公园</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>白鹿原·白鹿仓</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>青曲社</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>西安半坡遗址</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>中国唐苑</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>西安世博园</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>秦始皇陵博物院</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>华清池景区</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>终南山·南五台景区</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>翠华山</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>乐华恒业欢乐世界</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>秦岭野生动物园</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>古观音禅寺</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>西北工业大学长安校区</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>西安电子科技大学南校区</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>诗经里</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>昆明池七夕公园</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>华夏文旅海洋公园</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>清凉山森林公园</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>西安植物园</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>曲江池遗址公园</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>城市运动公园</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>兴庆宫公园</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>浐灞桃花潭公园</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>西安建筑科技大学草堂校区</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QTextEdit" name="output">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>303</y>
+      <width>371</width>
+      <height>41</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>600</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>城市导航系统</string>
+    </property>
+   </widget>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="CNS.qrc"/>
+ </resources>
+ <connections/>
+</ui>
